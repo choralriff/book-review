@@ -1,0 +1,8 @@
+
+
+@RestController
+public class BookReviewController {
+	
+	
+
+}
