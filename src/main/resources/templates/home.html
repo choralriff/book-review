@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+  <head>
+    <title>Spring Boot BookReview</title>
+    <link rel="stylesheet" th:href="@{/style.css}" />
+  <head>
+  <body>
+    <h2>Spring Boot BookReview</h2>
+
+    <form method="POST">
+      <label for="title">Title:</label>
+        <input type="text" title="title"></input><br>
+      <label for="authorFirstName">Author First Name:</label>
+        <input type="text" title="authorFirstName"></input><br>
+      <label for="authorLastName">Author Last Name:</label>
+        <input type="text" title="authorLastName"></input><br>
+      <label for="id">ID:</label>
+        <input type="text" title="id"></input><br>
+      <input type="submit"></input>
+    </form>
+
+    <ul th:each="book : ${books}">
+      <li>
+        <span th:text="${book.title}">Title</span>
+        <span th:text="${book.authorLastName}">Author Last Name</span>
+        <span th:text="${book.authorFirstName}">Author First Name</span>
+      </li>
+    </ul>
+  </body>
+</html>

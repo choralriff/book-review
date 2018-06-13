@@ -27,6 +27,12 @@ repositories {
 dependencies {
 	// compile('org.springframework.boot:spring-boot-starter-data-jpa')
 	compile('org.springframework.boot:spring-boot-starter-web')
-	// runtime('mysql:mysql-connector-java')
+	compile("org.thymeleaf:thymeleaf-spring5:3.0.9.RELEASE")
+	compile("org.springframework.boot:spring-boot-starter-jdbc")
+	compile("com.h2database:h2")
 	testCompile('org.springframework.boot:spring-boot-starter-test')
+}
+
+task wrapper(type: Wrapper) {
+	gradleVersion = 1.8
 }
